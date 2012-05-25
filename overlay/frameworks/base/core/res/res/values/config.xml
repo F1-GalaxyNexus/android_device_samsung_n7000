@@ -199,6 +199,9 @@
         <item>30</item>
     </integer-array>
 
+    <!-- Component name of the default wallpaper. This will be ImageWallpaper if not specified -->
+    <string name="default_wallpaper_component">com.android.phasebeam/.PhaseBeamWallpaper</string>
+
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">pdp0</string>
 
