@@ -20,7 +20,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_LOCALES += xhdpi
 
 #Bootanimation
-TARGET_BOOTANIMATION_NAME := vertical-720x1280
+TARGET_BOOTANIMATION_NAME := vertical-800x1280
 
 # Init files
 PRODUCT_COPY_FILES := \
@@ -38,12 +38,13 @@ PRODUCT_COPY_FILES += \
 	device/samsung/n7000/configs/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
+	ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.vold.switchexternal=1
 
 # Wifi
 PRODUCT_COPY_FILES += \
-	device/samsung/n7000/configs/nvram_net.txt:system/etc/nvram_net.txt \
-	device/samsung/n7000/configs/nvram_mfg.txt:system/etc/nvram_mfg.txt \
 	device/samsung/n7000/configs/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
 
 PRODUCT_PROPERTY_OVERRIDES += \
